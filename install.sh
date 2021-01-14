@@ -1,10 +1,9 @@
 #!/bin/bash
-# This script does not download the package to install it.
-# This is because I assume wget/curl might not work as proxy hasn't been set.
 
 # Working from current directory having proxyman
 
 TARGET_DIR="/opt/proxyman"
+CONFIG_DIR)"/etc/proxyman"
 MAIN=$TARGET_DIR/main.sh
 BASHRC="/etc/bash.bashrc"
 ZSHRC="/etc/zsh/zshrc"
@@ -19,12 +18,16 @@ else
 fi
 
 
+# Creates the directories and copys the files
 
 mkdir -p $TARGET_DIR
+mkdir -p $CONFIG_DIR
+
 cp * $TARGET_DIR
 chmod -R a+rwx /etc/proxyman
 
 
+# Adds the proxyman alias to bashrc and zshrc if not already present
 
 if ! grep -q $MAIN $BASHRC; then
 	echo $MAIN >> $BASHRC
