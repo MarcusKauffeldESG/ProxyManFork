@@ -8,6 +8,8 @@ MAIN=$TARGET_DIR/main.sh
 BASHRC="/etc/bash.bashrc"
 ZSHRC="/etc/zsh/zshrc"
 
+#TODO Add verification if root
+
 
 # verify if this is current directory
 if [[ -f "main.sh" && -f "shellrc.sh" && -f "dropbox.sh" ]]; then
@@ -31,22 +33,20 @@ chmod -R a+rwx /etc/proxyman
 
 if ! grep -q $MAIN $BASHRC; then
 	echo 'alias="$MAIN"' >> $BASHRC
+	echo "Added alias to Bashrc"
 else
 	echo "Alias Already in Bashrc"
 	echo "Skipping to add it again"
 fi
 
 
-
 if ! grep -q $MAIN $ZSHRC; then
   	echo 'alias="$MAIN"' >> $ZSHRC
+	echo "Added alias to zshrc"
 else
 	echo "Alias Already in Zshrc"
         echo "Skipping to add it again"
 fi
-
-
-
 
 
 
