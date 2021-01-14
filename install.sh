@@ -30,7 +30,7 @@ chmod -R a+rwx /etc/proxyman
 # Adds the proxyman alias to bashrc and zshrc if not already present
 
 if ! grep -q $MAIN $BASHRC; then
-	echo $MAIN >> $BASHRC
+	echo 'alias="$MAIN"' >> $BASHRC
 else
 	echo "Alias Already in Bashrc"
 	echo "Skipping to add it again"
@@ -39,7 +39,7 @@ fi
 
 
 if ! grep -q $MAIN $ZSHRC; then
-  echo $MAIN >> $ZSHRC
+  	echo 'alias="$MAIN"' >> $ZSHRC
 else
 	echo "Alias Already in Zshrc"
         echo "Skipping to add it again"
