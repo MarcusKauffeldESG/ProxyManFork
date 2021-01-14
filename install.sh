@@ -48,6 +48,7 @@ else
         echo "Skipping to add it again"
 fi
 
-
-
+echo ""
+echo "You can delete this folder now"
+echo ""
 echo "Installed please refresh your shell to use proxyman"
