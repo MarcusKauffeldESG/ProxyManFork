@@ -3,7 +3,7 @@
 # Working from current directory having proxyman
 
 TARGET_DIR="/opt/proxyman"
-CONFIG_DIR)"/etc/proxyman"
+CONFIG_DIR="/etc/proxyman"
 MAIN=$TARGET_DIR/main.sh
 BASHRC="/etc/bash.bashrc"
 ZSHRC="/etc/zsh/zshrc"
