@@ -1,9 +1,9 @@
 #!/bin/bash
 #
 # If you have found some issues, or some feature request :
-# Raise them here : https://github.com/himanshub16/ProxyMan/issues
+# Raise them here : https://github.com/MarcusKauffeldESG/ProxyManFork/issues
 # Author : Himanshu Shekhar (@himanshub16)
-#
+# Modified by: Kauffeld Marcus
 
 # This is the main script which calls other respective scripts.
 # In case of doubts regarding how to use, refer the README.md file.
